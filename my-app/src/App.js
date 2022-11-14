@@ -18,7 +18,7 @@ class App extends Component {
   createUser = (e) => {
       createUser(this.state.user)
         .then(response => {
-          console.log(response);
+          
           this.setState({numberOfUsers: this.state.numberOfUsers + 1})
       });
   }
@@ -26,7 +26,7 @@ class App extends Component {
   getAllUsers = () => {
     getAllUsers()
       .then(users => {
-        console.log(users)
+        
         this.setState({users: users, numberOfUsers: users.length})
       });
   }
